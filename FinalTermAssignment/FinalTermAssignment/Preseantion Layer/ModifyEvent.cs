@@ -69,5 +69,12 @@ namespace FinalTermAssignment
         {
             writeTextBox.Text = importantComboBox.Text = dateTimePicker.Text = string.Empty;
         }
+
+        private void logOutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            LoginFrom lf = new LoginFrom();
+            lf.Show();
+            this.Hide();
+        }
     }
 }
