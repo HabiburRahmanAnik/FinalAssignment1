@@ -30,17 +30,17 @@
         {
             this.writeTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.modifyDataGridView = new System.Windows.Forms.DataGridView();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.button1 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.modifyButton = new System.Windows.Forms.Button();
+            this.importantComboBox = new System.Windows.Forms.ComboBox();
+            this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.backButton = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.modifyDataGridView)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -62,18 +62,19 @@
             this.label1.TabIndex = 8;
             this.label1.Text = "Write Event";
             // 
-            // dataGridView1
+            // modifyDataGridView
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(835, 89);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(540, 304);
-            this.dataGridView1.TabIndex = 7;
+            this.modifyDataGridView.AllowUserToAddRows = false;
+            this.modifyDataGridView.AllowUserToDeleteRows = false;
+            this.modifyDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.modifyDataGridView.Location = new System.Drawing.Point(835, 89);
+            this.modifyDataGridView.Name = "modifyDataGridView";
+            this.modifyDataGridView.ReadOnly = true;
+            this.modifyDataGridView.RowHeadersWidth = 51;
+            this.modifyDataGridView.RowTemplate.Height = 24;
+            this.modifyDataGridView.Size = new System.Drawing.Size(540, 304);
+            this.modifyDataGridView.TabIndex = 7;
+            this.modifyDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.modifyDataGridView_CellClick);
             // 
             // menuStrip1
             // 
@@ -100,34 +101,35 @@
             this.logOutToolStripMenuItem.Size = new System.Drawing.Size(145, 26);
             this.logOutToolStripMenuItem.Text = "Log Out";
             // 
-            // button1
+            // modifyButton
             // 
-            this.button1.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(268, 536);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(245, 43);
-            this.button1.TabIndex = 15;
-            this.button1.Text = "Modify";
-            this.button1.UseVisualStyleBackColor = true;
+            this.modifyButton.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.modifyButton.Location = new System.Drawing.Point(268, 536);
+            this.modifyButton.Name = "modifyButton";
+            this.modifyButton.Size = new System.Drawing.Size(245, 43);
+            this.modifyButton.TabIndex = 15;
+            this.modifyButton.Text = "Modify";
+            this.modifyButton.UseVisualStyleBackColor = true;
+            this.modifyButton.Click += new System.EventHandler(this.button1_Click);
             // 
-            // comboBox1
+            // importantComboBox
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.importantComboBox.FormattingEnabled = true;
+            this.importantComboBox.Items.AddRange(new object[] {
             "High importance",
             "moderate",
             "Less importance"});
-            this.comboBox1.Location = new System.Drawing.Point(185, 406);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(200, 24);
-            this.comboBox1.TabIndex = 14;
+            this.importantComboBox.Location = new System.Drawing.Point(185, 406);
+            this.importantComboBox.Name = "importantComboBox";
+            this.importantComboBox.Size = new System.Drawing.Size(200, 24);
+            this.importantComboBox.TabIndex = 14;
             // 
-            // dateTimePicker1
+            // dateTimePicker
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(185, 342);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
-            this.dateTimePicker1.TabIndex = 13;
+            this.dateTimePicker.Location = new System.Drawing.Point(185, 342);
+            this.dateTimePicker.Name = "dateTimePicker";
+            this.dateTimePicker.Size = new System.Drawing.Size(200, 22);
+            this.dateTimePicker.TabIndex = 13;
             // 
             // label3
             // 
@@ -167,19 +169,20 @@
             this.ClientSize = new System.Drawing.Size(1422, 668);
             this.Controls.Add(this.writeTextBox);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.modifyDataGridView);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.backButton);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.modifyButton);
+            this.Controls.Add(this.importantComboBox);
+            this.Controls.Add(this.dateTimePicker);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Name = "ModifyEvent";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ModifyEvent";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ModifyEvent_FormClosing);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.ModifyEvent_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.modifyDataGridView)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -191,13 +194,13 @@
 
         private System.Windows.Forms.TextBox writeTextBox;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView modifyDataGridView;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem logOutToolStripMenuItem;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Button modifyButton;
+        private System.Windows.Forms.ComboBox importantComboBox;
+        private System.Windows.Forms.DateTimePicker dateTimePicker;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button backButton;

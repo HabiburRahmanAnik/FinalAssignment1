@@ -46,8 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DataAcces\UpdateDataAccess.cs" />
     <Compile Include="Diary Logic Layer\DeleteService.cs" />
+    <Compile Include="Diary Logic Layer\ModifyService.cs" />
     <Compile Include="Preseantion Layer\AddEvent.cs">
       <SubType>Form</SubType>
     </Compile>
