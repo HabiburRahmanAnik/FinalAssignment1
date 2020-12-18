@@ -13,11 +13,23 @@ namespace FinalTermAssignment
 {
     public partial class ModifyEvent : Form
     {
+        DetailsFrom df;
+        HomeScreen homeScreen;
+        AddEvent addEvent;
+        DeleteEvent deleteEvent;
         string name;
         int eventId = 0;
+
+        public ModifyEvent(AddEvent addEvent,string name)
+        {
+            InitializeComponent();
+            this.addEvent = addEvent;
+            this.name = name;
+        }
         public ModifyEvent(DetailsFrom df,string name)
         {
             InitializeComponent();
+            this.df = df;
             this.name = name;
             modifyButton.Click += this.Refreash;
             modifyButton.Click += this.Clear;
@@ -26,13 +38,6 @@ namespace FinalTermAssignment
         private void ModifyEvent_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
-        }
-
-        private void backButton_Click(object sender, EventArgs e)
-        {
-            HomeScreen homeScreen = new HomeScreen();
-            homeScreen.Show();
-            this.Hide();
         }
 
         private void button1_Click(object sender, EventArgs e)

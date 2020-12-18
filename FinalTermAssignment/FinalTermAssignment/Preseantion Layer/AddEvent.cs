@@ -13,7 +13,9 @@ namespace FinalTermAssignment
 {
     public partial class AddEvent : Form
     {
-        
+        ModifyEvent modifyEvent;
+        HomeScreen HomeScreen;
+        DeleteEvent deleteEvent;
         string name;
         public AddEvent(DetailsFrom df, string name)
         {
@@ -22,18 +24,16 @@ namespace FinalTermAssignment
             addButton.Click += this.Refreash;
             addButton.Click += this.Clear;
         }
+        public AddEvent(HomeScreen homeScreen)
+        {
+            InitializeComponent();
+            this.HomeScreen = homeScreen;
+            addButton.Click += this.Refreash;
+            addButton.Click += this.Clear;
+        }
         private void AddEvent_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
-        }
-
-        private void backButton_Click(object sender, EventArgs e)
-        {
-            //HomeScreen homeScreen = new HomeScreen(this,name);
-            //HomeService homeService = new HomeService();
-            
-            //homeScreen.Show();
-            //this.Hide();
         }
 
         private void AddEvent_Load(object sender, EventArgs e)
@@ -45,15 +45,15 @@ namespace FinalTermAssignment
         private void button1_Click(object sender, EventArgs e)
         {
             AddService addService = new AddService();
-           // int result = addService.Add(writeTextBox.Text, priorityComboBox.Text, dateTimePicker1.Text);
-            //if (result>0)
-            //{
-            //    MessageBox.Show("Add seccessfully");
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Error occur");
-            //}
+            int result = addService.Add(titleTextBox.Text,writeTextBox.Text, priorityComboBox.Text, dateTimePicker1.Text,Convert.ToInt32(userIdTextBox.Text));
+            if (result > 0)
+            {
+                MessageBox.Show("Add seccessfully");
+            }
+            else
+            {
+                MessageBox.Show("Error occur");
+            }
         }
         void Refreash(object sender, EventArgs e)
         {
@@ -69,6 +69,34 @@ namespace FinalTermAssignment
         {
             LoginFrom lf = new LoginFrom();
             lf.Show();
+            this.Hide();
+        }
+
+        private void modifyEventsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            modifyEvent = new ModifyEvent(this,name);
+            modifyEvent.Show();
+            this.Hide();
+        }
+
+        private void homeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            HomeScreen=new HomeScreen(this,name);
+            HomeScreen.Show();
+            this.Hide();
+        }
+
+        private void logOutToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            LoginFrom loginFrom = new LoginFrom();
+            loginFrom.Show();
+            this.Hide();
+        }
+
+        private void deleteEventsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            deleteEvent = new DeleteEvent(this,name);
+            deleteEvent.Show();
             this.Hide();
         }
     }

@@ -13,12 +13,26 @@ namespace FinalTermAssignment
 {
     public partial class HomeScreen : Form
     {
+        AddEvent addEvent;
+        DeleteEvent deleteEvent;
         LoginFrom lf;
         string name;
-        int id=1;
+
         public HomeScreen()
         {
             InitializeComponent();
+        }
+        public HomeScreen(AddEvent addEvent,string name)
+        {
+            InitializeComponent();
+            this.addEvent = addEvent;
+            this.name = name;
+        }
+        public HomeScreen(DeleteEvent deleteEvent, string name)
+        {
+            InitializeComponent();
+            this.deleteEvent = deleteEvent;
+            this.name = name;
         }
         public HomeScreen(LoginFrom lf,string name)
         {
