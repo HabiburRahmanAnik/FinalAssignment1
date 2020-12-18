@@ -40,13 +40,16 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.backButton = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.titleTextBox = new System.Windows.Forms.TextBox();
+            this.idTextbox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.modifyDataGridView)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // writeTextBox
             // 
-            this.writeTextBox.Location = new System.Drawing.Point(185, 89);
+            this.writeTextBox.Location = new System.Drawing.Point(185, 190);
             this.writeTextBox.Multiline = true;
             this.writeTextBox.Name = "writeTextBox";
             this.writeTextBox.Size = new System.Drawing.Size(588, 203);
@@ -56,7 +59,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(60, 162);
+            this.label1.Location = new System.Drawing.Point(64, 280);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(97, 20);
             this.label1.TabIndex = 8;
@@ -72,7 +75,7 @@
             this.modifyDataGridView.ReadOnly = true;
             this.modifyDataGridView.RowHeadersWidth = 51;
             this.modifyDataGridView.RowTemplate.Height = 24;
-            this.modifyDataGridView.Size = new System.Drawing.Size(540, 304);
+            this.modifyDataGridView.Size = new System.Drawing.Size(575, 304);
             this.modifyDataGridView.TabIndex = 7;
             this.modifyDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.modifyDataGridView_CellClick);
             // 
@@ -99,7 +102,7 @@
             // logOutToolStripMenuItem
             // 
             this.logOutToolStripMenuItem.Name = "logOutToolStripMenuItem";
-            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(224, 28);
+            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(156, 28);
             this.logOutToolStripMenuItem.Text = "Log Out";
             this.logOutToolStripMenuItem.Click += new System.EventHandler(this.logOutToolStripMenuItem_Click);
             // 
@@ -121,14 +124,14 @@
             "High importance",
             "moderate",
             "Less importance"});
-            this.importantComboBox.Location = new System.Drawing.Point(185, 406);
+            this.importantComboBox.Location = new System.Drawing.Point(185, 470);
             this.importantComboBox.Name = "importantComboBox";
             this.importantComboBox.Size = new System.Drawing.Size(200, 24);
             this.importantComboBox.TabIndex = 14;
             // 
             // dateTimePicker
             // 
-            this.dateTimePicker.Location = new System.Drawing.Point(185, 342);
+            this.dateTimePicker.Location = new System.Drawing.Point(185, 411);
             this.dateTimePicker.Name = "dateTimePicker";
             this.dateTimePicker.Size = new System.Drawing.Size(200, 22);
             this.dateTimePicker.TabIndex = 13;
@@ -137,7 +140,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(64, 410);
+            this.label3.Location = new System.Drawing.Point(64, 470);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(93, 20);
             this.label3.TabIndex = 9;
@@ -147,7 +150,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(83, 344);
+            this.label2.Location = new System.Drawing.Point(79, 411);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(42, 20);
             this.label2.TabIndex = 10;
@@ -164,11 +167,41 @@
             this.backButton.UseVisualStyleBackColor = true;
             this.backButton.Click += new System.EventHandler(this.backButton_Click);
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(64, 106);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(43, 20);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Title";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
+            // 
+            // titleTextBox
+            // 
+            this.titleTextBox.Location = new System.Drawing.Point(185, 81);
+            this.titleTextBox.Multiline = true;
+            this.titleTextBox.Name = "titleTextBox";
+            this.titleTextBox.Size = new System.Drawing.Size(588, 79);
+            this.titleTextBox.TabIndex = 11;
+            this.titleTextBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // idTextbox
+            // 
+            this.idTextbox.Location = new System.Drawing.Point(653, 468);
+            this.idTextbox.Name = "idTextbox";
+            this.idTextbox.Size = new System.Drawing.Size(215, 22);
+            this.idTextbox.TabIndex = 16;
+            // 
             // ModifyEvent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1422, 668);
+            this.Controls.Add(this.idTextbox);
+            this.Controls.Add(this.titleTextBox);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.writeTextBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.modifyDataGridView);
@@ -206,5 +239,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button backButton;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox titleTextBox;
+        private System.Windows.Forms.TextBox idTextbox;
     }
 }

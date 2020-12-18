@@ -8,11 +8,11 @@ namespace FinalTermAssignment.Entities
 {
     class Event
     {
-        public int Id { get; set; }
+        public int EventId { get; set; }
         public string Title { get; set; }
-        public string Note1{ get; set; }
+        public string WriteTab{ get; set; }
         public string Priority { get; set; }
         public string Date { get; set; }
-
+        public int Id { get; set; }
     }
 }

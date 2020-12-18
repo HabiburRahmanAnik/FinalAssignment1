@@ -37,7 +37,7 @@ namespace FinalTermAssignment
         private void HomeScreen_Load(object sender, EventArgs e)
         {
             HomeService homeService = new HomeService();
-            dataGridView1.DataSource = homeService.GetAllNote(name);
+            homeScreenDataGridView.DataSource = homeService.GetAllNote(name);
         }
 
 
@@ -46,32 +46,13 @@ namespace FinalTermAssignment
             LoginFrom lf = new LoginFrom();
             lf.Show();
             this.Hide();
-        }
-
-        private void createNewEvenrButton_Click(object sender, EventArgs e)
-        {
-            AddEvent add = new AddEvent(this,name);
-            add.Show();
-            this.Hide();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            DeleteEvent deleteEvent = new DeleteEvent();
-            deleteEvent.Show();
-            this.Hide();
-        }
-
-        private void modifyButton_Click(object sender, EventArgs e)
-        {
-            ModifyEvent modifyEvent = new ModifyEvent();
-            modifyEvent.Show();
-            this.Hide();
-        }
+        }     
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            DetailsFrom dt = new DetailsFrom(this,name);
+            dt.Show();
+            this.Hide();
         }
     }
 }

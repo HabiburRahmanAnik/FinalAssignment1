@@ -31,19 +31,14 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.writeTextBox = new System.Windows.Forms.TextBox();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label2 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
-            this.importantComboBox = new System.Windows.Forms.ComboBox();
+            this.priorityComboBox = new System.Windows.Forms.ComboBox();
             this.addButton = new System.Windows.Forms.Button();
-            this.backButton = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.titleTextBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -65,9 +60,9 @@
             this.label1.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(64, 204);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(97, 20);
+            this.label1.Size = new System.Drawing.Size(81, 20);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Write Event";
+            this.label1.Text = "Write Tab";
             // 
             // writeTextBox
             // 
@@ -76,32 +71,6 @@
             this.writeTextBox.Name = "writeTextBox";
             this.writeTextBox.Size = new System.Drawing.Size(588, 180);
             this.writeTextBox.TabIndex = 2;
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fileToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1374, 28);
-            this.menuStrip1.TabIndex = 3;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // fileToolStripMenuItem
-            // 
-            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.logOutToolStripMenuItem});
-            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(46, 24);
-            this.fileToolStripMenuItem.Text = "File";
-            // 
-            // logOutToolStripMenuItem
-            // 
-            this.logOutToolStripMenuItem.Name = "logOutToolStripMenuItem";
-            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(145, 26);
-            this.logOutToolStripMenuItem.Text = "Log Out";
-            this.logOutToolStripMenuItem.Click += new System.EventHandler(this.logOutToolStripMenuItem_Click);
             // 
             // label2
             // 
@@ -126,21 +95,21 @@
             this.label3.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(64, 388);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(93, 20);
+            this.label3.Size = new System.Drawing.Size(67, 20);
             this.label3.TabIndex = 1;
-            this.label3.Text = "Importance";
+            this.label3.Text = "Priority";
             // 
-            // importantComboBox
+            // priorityComboBox
             // 
-            this.importantComboBox.FormattingEnabled = true;
-            this.importantComboBox.Items.AddRange(new object[] {
+            this.priorityComboBox.FormattingEnabled = true;
+            this.priorityComboBox.Items.AddRange(new object[] {
             "High importance",
             "moderate",
             "Less importance"});
-            this.importantComboBox.Location = new System.Drawing.Point(185, 388);
-            this.importantComboBox.Name = "importantComboBox";
-            this.importantComboBox.Size = new System.Drawing.Size(200, 24);
-            this.importantComboBox.TabIndex = 5;
+            this.priorityComboBox.Location = new System.Drawing.Point(185, 388);
+            this.priorityComboBox.Name = "priorityComboBox";
+            this.priorityComboBox.Size = new System.Drawing.Size(200, 24);
+            this.priorityComboBox.TabIndex = 5;
             // 
             // addButton
             // 
@@ -153,60 +122,44 @@
             this.addButton.UseVisualStyleBackColor = true;
             this.addButton.Click += new System.EventHandler(this.button1_Click);
             // 
-            // backButton
-            // 
-            this.backButton.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.backButton.Location = new System.Drawing.Point(1230, 467);
-            this.backButton.Name = "backButton";
-            this.backButton.Size = new System.Drawing.Size(115, 43);
-            this.backButton.TabIndex = 6;
-            this.backButton.Text = "Back";
-            this.backButton.UseVisualStyleBackColor = true;
-            this.backButton.Click += new System.EventHandler(this.backButton_Click);
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(65, 73);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(46, 17);
+            this.label4.Size = new System.Drawing.Size(35, 17);
             this.label4.TabIndex = 7;
-            this.label4.Text = "label4";
+            this.label4.Text = "Title";
             // 
-            // textBox1
+            // titleTextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(185, 49);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(588, 67);
-            this.textBox1.TabIndex = 8;
+            this.titleTextBox.Location = new System.Drawing.Point(185, 49);
+            this.titleTextBox.Multiline = true;
+            this.titleTextBox.Name = "titleTextBox";
+            this.titleTextBox.Size = new System.Drawing.Size(588, 67);
+            this.titleTextBox.TabIndex = 8;
             // 
             // AddEvent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1374, 532);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.titleTextBox);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.backButton);
             this.Controls.Add(this.addButton);
-            this.Controls.Add(this.importantComboBox);
+            this.Controls.Add(this.priorityComboBox);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.writeTextBox);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.menuStrip1);
-            this.MainMenuStrip = this.menuStrip1;
             this.Name = "AddEvent";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddEvent";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.AddEvent_FormClosing);
             this.Load += new System.EventHandler(this.AddEvent_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -217,16 +170,12 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox writeTextBox;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem logOutToolStripMenuItem;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox importantComboBox;
+        private System.Windows.Forms.ComboBox priorityComboBox;
         private System.Windows.Forms.Button addButton;
-        private System.Windows.Forms.Button backButton;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox titleTextBox;
     }
 }

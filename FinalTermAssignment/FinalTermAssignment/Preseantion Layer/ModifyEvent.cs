@@ -13,10 +13,12 @@ namespace FinalTermAssignment
 {
     public partial class ModifyEvent : Form
     {
-        int id = 0;
-        public ModifyEvent()
+        string name;
+        int eventId = 0;
+        public ModifyEvent(DetailsFrom df,string name)
         {
             InitializeComponent();
+            this.name = name;
             modifyButton.Click += this.Refreash;
             modifyButton.Click += this.Clear;
         }
@@ -35,8 +37,8 @@ namespace FinalTermAssignment
 
         private void button1_Click(object sender, EventArgs e)
         {
-            ModifyService modifyService = new ModifyService();
-           int result = modifyService.ModifyNotes(id, writeTextBox.Text, dateTimePicker.Text, importantComboBox.Text);
+           ModifyService modifyService = new ModifyService();
+           int result = modifyService.ModifyNotes(eventId,titleTextBox.Text, writeTextBox.Text, dateTimePicker.Text, importantComboBox.Text);
             if (result > 0)
             {
                 MessageBox.Show("Modify Successfully");
@@ -49,21 +51,22 @@ namespace FinalTermAssignment
 
         private void ModifyEvent_Load(object sender, EventArgs e)
         {
-            HomeService homeService = new HomeService();
-           // modifyDataGridView.DataSource = homeService.GetAllNote();
+            AddService addService = new AddService();
+            modifyDataGridView.DataSource = addService.GetAllEvent(name);
         }
 
         private void modifyDataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            id = (int)modifyDataGridView.Rows[e.RowIndex].Cells[0].Value;
-            writeTextBox.Text = modifyDataGridView.Rows[e.RowIndex].Cells[1].Value.ToString();
-            dateTimePicker.Text = modifyDataGridView.Rows[e.RowIndex].Cells[3].Value.ToString();
-            importantComboBox.Text = modifyDataGridView.Rows[e.RowIndex].Cells[2].Value.ToString();
+            eventId = (int)modifyDataGridView.Rows[e.RowIndex].Cells[0].Value;
+            titleTextBox.Text= modifyDataGridView.Rows[e.RowIndex].Cells[1].Value.ToString();
+            writeTextBox.Text = modifyDataGridView.Rows[e.RowIndex].Cells[2].Value.ToString();
+            importantComboBox.Text = modifyDataGridView.Rows[e.RowIndex].Cells[3].Value.ToString();
+            dateTimePicker.Text = modifyDataGridView.Rows[e.RowIndex].Cells[4].Value.ToString();
         }
         void Refreash(object sender, EventArgs e)
         {
-            HomeService homeService = new HomeService();
-            //modifyDataGridView.DataSource = homeService.GetAllNote();
+            AddService addService = new AddService();
+            modifyDataGridView.DataSource = addService.GetAllEvent(name);
         }
         void Clear(object sender, EventArgs e)
         {
@@ -75,6 +78,16 @@ namespace FinalTermAssignment
             LoginFrom lf = new LoginFrom();
             lf.Show();
             this.Hide();
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -13,12 +13,11 @@ namespace FinalTermAssignment
 {
     public partial class AddEvent : Form
     {
-        HomeScreen hc;
+        
         string name;
-        public AddEvent(HomeScreen hc, string name)
+        public AddEvent(DetailsFrom df, string name)
         {
             InitializeComponent();
-            this.hc = hc;
             this.name = name;
             addButton.Click += this.Refreash;
             addButton.Click += this.Clear;
@@ -30,9 +29,11 @@ namespace FinalTermAssignment
 
         private void backButton_Click(object sender, EventArgs e)
         {
-            HomeScreen homeScreen = new HomeScreen();
-            homeScreen.Show();
-            this.Hide();
+            //HomeScreen homeScreen = new HomeScreen(this,name);
+            //HomeService homeService = new HomeService();
+            
+            //homeScreen.Show();
+            //this.Hide();
         }
 
         private void AddEvent_Load(object sender, EventArgs e)
@@ -44,15 +45,15 @@ namespace FinalTermAssignment
         private void button1_Click(object sender, EventArgs e)
         {
             AddService addService = new AddService();
-            int result = addService.Add(writeTextBox.Text, importantComboBox.Text, dateTimePicker1.Text);
-            if (result>0)
-            {
-                MessageBox.Show("Add seccessfully");
-            }
-            else
-            {
-                MessageBox.Show("Error occur");
-            }
+           // int result = addService.Add(writeTextBox.Text, priorityComboBox.Text, dateTimePicker1.Text);
+            //if (result>0)
+            //{
+            //    MessageBox.Show("Add seccessfully");
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Error occur");
+            //}
         }
         void Refreash(object sender, EventArgs e)
         {
@@ -61,7 +62,7 @@ namespace FinalTermAssignment
         }
         void Clear(object sender, EventArgs e)
         {
-            writeTextBox.Text =importantComboBox.Text=dateTimePicker1.Text= string.Empty;
+            writeTextBox.Text =priorityComboBox.Text=dateTimePicker1.Text= string.Empty;
         }
 
         private void logOutToolStripMenuItem_Click(object sender, EventArgs e)

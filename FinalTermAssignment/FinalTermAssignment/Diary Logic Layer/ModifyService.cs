@@ -15,13 +15,14 @@ namespace FinalTermAssignment.Diary_Logic_Layer
         {
             this.modifyEventDataAccess = new ModifyEventDataAccess();
         }
-        public int ModifyNotes(int id,string note1,string date,string important)
+        public int ModifyNotes(int eventId,string title,string writetab,string date,string priority)
         {
             Event note = new Event()
             {
-                Id = id,
-                Note1 = note1,
-                Priority = important,
+                EventId = eventId,
+                Title = title,
+                WriteTab = writetab,
+                Priority = priority,
                 Date = date
             };
             return this.modifyEventDataAccess.ModofyNotes(note);

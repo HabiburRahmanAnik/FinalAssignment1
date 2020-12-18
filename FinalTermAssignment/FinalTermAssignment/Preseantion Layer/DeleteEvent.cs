@@ -13,10 +13,12 @@ namespace FinalTermAssignment
 {
     public partial class DeleteEvent : Form
     {
-        int id = 0;
-        public DeleteEvent()
+        // int eventId = 0;
+        string name;
+        public DeleteEvent(DetailsFrom df,string name)
         {
             InitializeComponent();
+            this.name = name;
             delete_Button.Click += this.Refreash;
             delete_Button.Click += this.Clear;
         }
@@ -26,24 +28,15 @@ namespace FinalTermAssignment
             Application.Exit();
         }
 
-        private void backButton_Click(object sender, EventArgs e)
-        {
-            HomeScreen homeScreen = new HomeScreen();
-            homeScreen.Show();
-            this.Hide();
-        }
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            id = (int)dataGridView1.Rows[e.RowIndex].Cells[0].Value;
-            writeTextBox.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
-            dateTextBox.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
-            importantComboBox.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+           // eventId = (int)deleteDataGridView.Rows[e.RowIndex].Cells[0].Value;
 
         }
         private void button1_Click(object sender, EventArgs e)
         {
             DeleteService deleteService = new DeleteService();
-            int result = deleteService.DeleteNotes(id);
+            int result = deleteService.DeleteNotes(Convert.ToInt32( eventIdtextBox.Text));
             if(result>0)
             {
                 MessageBox.Show("Delete Successfully");
@@ -56,17 +49,16 @@ namespace FinalTermAssignment
 
         private void DeleteEvent_Load(object sender, EventArgs e)
         {
-            HomeService homeService = new HomeService();
-          // dataGridView1.DataSource = homeService.GetAllNote();
+            
         }
         void Refreash(object sender, EventArgs e)
         {
-            HomeService homeService = new HomeService();
-          //  dataGridView1.DataSource = homeService.GetAllNote();
+            AddService addService = new AddService();
+            deleteDataGridView.DataSource = addService.GetAllEvent(name);
         }
         void Clear(object sender, EventArgs e)
         {
-            writeTextBox.Text = importantComboBox.Text = dateTextBox.Text = string.Empty;
+            eventIdtextBox.Text = string.Empty;
         }
 
         private void logOutToolStripMenuItem_Click(object sender, EventArgs e)

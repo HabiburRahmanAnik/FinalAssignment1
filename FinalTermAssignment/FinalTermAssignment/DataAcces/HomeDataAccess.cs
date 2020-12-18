@@ -28,7 +28,8 @@ namespace FinalTermAssignment.DataAcces
             List<Event> list = new List<Event>();
             while (reader.Read())
             {
-                Event note = new Event();              
+                Event note = new Event();
+                note.EventId = (int)reader["EventId"];
                 note.Title = reader["Title"].ToString();
                 note.Date = reader["Date"].ToString();
                 list.Add(note);
