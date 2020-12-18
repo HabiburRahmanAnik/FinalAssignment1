@@ -15,7 +15,7 @@ namespace FinalTermAssignment
     {
         LoginFrom lf;
         string name;
-       // int id;
+        int id=1;
         public HomeScreen()
         {
             InitializeComponent();
@@ -35,9 +35,9 @@ namespace FinalTermAssignment
         }
 
         private void HomeScreen_Load(object sender, EventArgs e)
-        {            
+        {
             HomeService homeService = new HomeService();
-            dataGridView1.DataSource = homeService.GetAllNote();
+            dataGridView1.DataSource = homeService.GetAllNote(name);
         }
 
 
@@ -50,7 +50,7 @@ namespace FinalTermAssignment
 
         private void createNewEvenrButton_Click(object sender, EventArgs e)
         {
-            AddEvent add = new AddEvent();
+            AddEvent add = new AddEvent(this,name);
             add.Show();
             this.Hide();
         }
@@ -69,7 +69,7 @@ namespace FinalTermAssignment
             this.Hide();
         }
 
-        private void panel2_Paint(object sender, PaintEventArgs e)
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

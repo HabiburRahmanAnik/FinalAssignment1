@@ -15,9 +15,9 @@ namespace FinalTermAssignment.DataAcces
             this.dataAcces = new DataAcces();
         }
 
-        public int ModofyNotes(Note note)
+        public int ModofyNotes(Event note)
         {
-            string query = "UPDATE Notes SET Note='" + note.Note1 + "',Important='" + note.Important + "',Date='" + note.Date + "' WHERE Id="+note.Id;
+            string query = "UPDATE Notes SET Note='" + note.Note1 + "',Important='" + note.Priority + "',Date='" + note.Date + "' WHERE Id="+note.Id;
             int result = this.dataAcces.ExecuteQuery(query);
             return result;
         }

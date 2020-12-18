@@ -17,20 +17,19 @@ namespace FinalTermAssignment.DataAcces
             this.dataAcces = new DataAcces();
         }
 
-        public List<User> Login(User user)
+        public bool Login(string username,string password)
         {
-            string query = "SELECT * FROM User3 WHERE Username='" + user.UserName + "' and Password='" + user.Password + "'";
+            string query = "SELECT * FROM User3 WHERE Username='" + username + "' and Password='" + password + "'";
             SqlDataReader reader = this.dataAcces.GetAll(query);
-            List<User> users = new List<User>();
-
-            while(reader.Read())
+            if (reader.Read())
             {
-                user.Id = (int)reader["Id"];
-                user.UserName = reader["UserName"].ToString();
-                user.Password = reader["Password"].ToString();
-                users.Add(user);
+                return true;
             }
-            return users;
+            else
+            {
+                return false;
+            }
+           
         }
     }
 }

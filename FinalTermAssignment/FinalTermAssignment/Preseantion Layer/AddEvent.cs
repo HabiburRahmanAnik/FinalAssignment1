@@ -13,13 +13,16 @@ namespace FinalTermAssignment
 {
     public partial class AddEvent : Form
     {
-        public AddEvent()
+        HomeScreen hc;
+        string name;
+        public AddEvent(HomeScreen hc, string name)
         {
             InitializeComponent();
+            this.hc = hc;
+            this.name = name;
             addButton.Click += this.Refreash;
             addButton.Click += this.Clear;
         }
-
         private void AddEvent_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
@@ -34,8 +37,8 @@ namespace FinalTermAssignment
 
         private void AddEvent_Load(object sender, EventArgs e)
         {
-            HomeService homeService = new HomeService();
-            dataGridView1.DataSource=homeService.GetAllNote();
+            AddService addService = new AddService();
+            dataGridView1.DataSource = addService.GetAllEvent(name);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -53,8 +56,8 @@ namespace FinalTermAssignment
         }
         void Refreash(object sender, EventArgs e)
         {
-            HomeService homeService = new HomeService();
-            dataGridView1.DataSource = homeService.GetAllNote();
+            AddService addService = new AddService();
+            dataGridView1.DataSource= addService.GetAllEvent(name);
         }
         void Clear(object sender, EventArgs e)
         {

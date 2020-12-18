@@ -16,8 +16,8 @@ namespace FinalTermAssignment
 {
     public partial class LoginFrom : Form
     {
-        int id;
-        string name;
+        //int id;
+        //string name;
         public LoginFrom()
         {
             InitializeComponent();
@@ -32,12 +32,19 @@ namespace FinalTermAssignment
         {
 
             LoginService loginService = new LoginService();
-            loginService.Login(userNameTextBox.Text, passwordTextBox.Text);
-            MessageBox.Show("login successfully");
-            HomeScreen hs = new HomeScreen(this, userNameTextBox.Text);
-            hs.Show();
-            this.Hide();
+           bool result=  loginService.Login(userNameTextBox.Text, passwordTextBox.Text);
+           if(result)
+            {
+                MessageBox.Show("Login Successfully");
+                HomeScreen homeScreen = new HomeScreen(this,userNameTextBox.Text);
+                homeScreen.Show();
+                this.Hide();
 
+            }
+            else
+            {
+                invalidLabel.Visible = true;
+            }
         }
     }
 }

@@ -16,15 +16,9 @@ namespace FinalTermAssignment.Diary_Logic_Layer
             this.loginDataAcces = new LoginDataAcces();
         }
 
-        public List<User> Login(string username, string password)
+        public bool Login(string username, string password)
         {
-            User user = new User()
-            {
-                UserName=username,
-                Password=password
-            };
-
-            return this.loginDataAcces.Login(user);
+           return this.loginDataAcces.Login(username,password);
         }
     }
 }

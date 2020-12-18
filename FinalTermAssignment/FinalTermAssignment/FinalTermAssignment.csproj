@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DetailsFrom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DetailsFrom.Designer.cs">
+      <DependentUpon>DetailsFrom.cs</DependentUpon>
+    </Compile>
     <Compile Include="Diary Logic Layer\DeleteService.cs" />
     <Compile Include="Diary Logic Layer\ModifyService.cs" />
     <Compile Include="Preseantion Layer\AddEvent.cs">
@@ -69,7 +75,7 @@
     <Compile Include="Diary Logic Layer\AddService.cs" />
     <Compile Include="Diary Logic Layer\HomeService.cs" />
     <Compile Include="Diary Logic Layer\LoginService.cs" />
-    <Compile Include="Entities\Note.cs" />
+    <Compile Include="Entities\Event.cs" />
     <Compile Include="Entities\User.cs" />
     <Compile Include="Preseantion Layer\HomeScreen.cs">
       <SubType>Form</SubType>
@@ -91,6 +97,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="DetailsFrom.resx">
+      <DependentUpon>DetailsFrom.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Preseantion Layer\AddEvent.resx">
       <DependentUpon>AddEvent.cs</DependentUpon>
     </EmbeddedResource>

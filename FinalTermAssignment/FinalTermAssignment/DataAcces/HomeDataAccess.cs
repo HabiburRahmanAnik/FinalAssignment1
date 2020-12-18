@@ -16,19 +16,20 @@ namespace FinalTermAssignment.DataAcces
             this.dataAcces = new DataAcces();
 
         }
-        public List<Note> GetAllNote()
+        public List<Event> GetAllNote(string username)
         {
-            string query = "SELECT * FROM Notes";
-            
+            string query = "SELECT * FROM User3 WHERE Username='" + username + "'";           
             SqlDataReader reader = this.dataAcces.GetAll(query);
-
-            List<Note> list = new List<Note>();
+            reader.Read();
+            int id = (int)reader["Id"];
+            string query1 = "SELECT * FROM Events WHERE Id=" + id;
+            dataAcces = new DataAcces();
+            reader = this.dataAcces.GetAll(query1);
+            List<Event> list = new List<Event>();
             while (reader.Read())
             {
-                Note note = new Note();
-                note.Id = (int)reader["Id"];
-                note.Note1 = reader["Note"].ToString();
-                note.Important = reader["Important"].ToString();
+                Event note = new Event();              
+                note.Title = reader["Title"].ToString();
                 note.Date = reader["Date"].ToString();
                 list.Add(note);
             }

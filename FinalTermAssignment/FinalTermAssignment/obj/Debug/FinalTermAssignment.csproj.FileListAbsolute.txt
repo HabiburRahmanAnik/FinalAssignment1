@@ -40,3 +40,4 @@ F:\8th semester\git\FinalAssignment1\FinalTermAssignment\FinalTermAssignment\obj
 F:\8th semester\git\FinalAssignment1\FinalTermAssignment\FinalTermAssignment\obj\Debug\FinalTermAssignment.csproj.CoreCompileInputs.cache
 F:\8th semester\git\FinalAssignment1\FinalTermAssignment\FinalTermAssignment\obj\Debug\FinalTermAssignment.exe
 F:\8th semester\git\FinalAssignment1\FinalTermAssignment\FinalTermAssignment\obj\Debug\FinalTermAssignment.pdb
+F:\8th semester\git\FinalAssignment1\FinalTermAssignment\FinalTermAssignment\obj\Debug\FinalTermAssignment.DetailsFrom.resources

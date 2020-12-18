@@ -17,9 +17,9 @@ namespace FinalTermAssignment.Diary_Logic_Layer
             this.homeDataAccess = new HomeDataAccess();
         }
 
-        public List<Note> GetAllNote()
+        public List<Event> GetAllNote(string username)
         {
-            return this.homeDataAccess.GetAllNote();
+            return this.homeDataAccess.GetAllNote(username);
         }
     }
 }

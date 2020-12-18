@@ -50,7 +50,7 @@ namespace FinalTermAssignment
         private void ModifyEvent_Load(object sender, EventArgs e)
         {
             HomeService homeService = new HomeService();
-            modifyDataGridView.DataSource = homeService.GetAllNote();
+           // modifyDataGridView.DataSource = homeService.GetAllNote();
         }
 
         private void modifyDataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -63,7 +63,7 @@ namespace FinalTermAssignment
         void Refreash(object sender, EventArgs e)
         {
             HomeService homeService = new HomeService();
-            modifyDataGridView.DataSource = homeService.GetAllNote();
+            //modifyDataGridView.DataSource = homeService.GetAllNote();
         }
         void Clear(object sender, EventArgs e)
         {

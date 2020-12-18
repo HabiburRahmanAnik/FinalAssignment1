@@ -57,12 +57,12 @@ namespace FinalTermAssignment
         private void DeleteEvent_Load(object sender, EventArgs e)
         {
             HomeService homeService = new HomeService();
-           dataGridView1.DataSource = homeService.GetAllNote();
+          // dataGridView1.DataSource = homeService.GetAllNote();
         }
         void Refreash(object sender, EventArgs e)
         {
             HomeService homeService = new HomeService();
-            dataGridView1.DataSource = homeService.GetAllNote();
+          //  dataGridView1.DataSource = homeService.GetAllNote();
         }
         void Clear(object sender, EventArgs e)
         {
