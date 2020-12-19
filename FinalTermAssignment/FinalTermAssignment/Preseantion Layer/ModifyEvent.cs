@@ -104,8 +104,15 @@ namespace FinalTermAssignment
 
         private void homeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            homeScreen = new HomeScreen();
+            homeScreen = new HomeScreen(this,name);
             homeScreen.Show();
+            this.Hide();
+        }
+
+        private void createNewEventToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            addEvent = new AddEvent(this,name);
+            addEvent.Show();
             this.Hide();
         }
     }

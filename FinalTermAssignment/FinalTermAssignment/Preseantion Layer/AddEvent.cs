@@ -31,6 +31,13 @@ namespace FinalTermAssignment
             addButton.Click += this.Refreash;
             addButton.Click += this.Clear;
         }
+        public AddEvent(ModifyEvent modifyEvent,string name)
+        {
+            InitializeComponent();
+            this.modifyEvent = modifyEvent;
+            this.name = name;
+           
+        }
         private void AddEvent_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();

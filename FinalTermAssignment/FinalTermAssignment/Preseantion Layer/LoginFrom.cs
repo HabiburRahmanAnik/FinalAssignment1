@@ -39,7 +39,6 @@ namespace FinalTermAssignment
                 HomeScreen homeScreen = new HomeScreen(this, userNameTextBox.Text);
                 homeScreen.Show();
                 this.Hide();
-
             }
             else
             {

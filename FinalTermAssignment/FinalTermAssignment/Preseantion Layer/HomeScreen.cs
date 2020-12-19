@@ -15,6 +15,7 @@ namespace FinalTermAssignment
     {
         AddEvent addEvent;
         DeleteEvent deleteEvent;
+        ModifyEvent modifyEvent;
         LoginFrom lf;
         string name;
 
@@ -32,6 +33,12 @@ namespace FinalTermAssignment
         {
             InitializeComponent();
             this.deleteEvent = deleteEvent;
+            this.name = name;
+        }
+        public HomeScreen(ModifyEvent modifyEvent, string name)
+        {
+            InitializeComponent();
+            this.modifyEvent = modifyEvent;
             this.name = name;
         }
         public HomeScreen(LoginFrom lf,string name)
