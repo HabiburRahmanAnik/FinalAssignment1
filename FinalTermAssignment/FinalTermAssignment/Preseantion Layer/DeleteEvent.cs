@@ -16,11 +16,18 @@ namespace FinalTermAssignment
         
         HomeScreen homeScreen;
         AddEvent addEvent;
+        ModifyEvent modifyEvent;
         string name;
         public DeleteEvent(AddEvent addEvent,string name)
         {
             InitializeComponent();
             this.addEvent = addEvent;
+            this.name = name;
+        }
+        public DeleteEvent(ModifyEvent modifyEvent, string name)
+        {
+            InitializeComponent();
+            this.modifyEvent = modifyEvent;
             this.name = name;
         }
         public DeleteEvent(DetailsFrom df,string name)

@@ -213,6 +213,7 @@
             this.deleteEventToolStripMenuItem.Name = "deleteEventToolStripMenuItem";
             this.deleteEventToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.deleteEventToolStripMenuItem.Text = "Delete Event";
+            this.deleteEventToolStripMenuItem.Click += new System.EventHandler(this.deleteEventToolStripMenuItem_Click);
             // 
             // logOutToolStripMenuItem
             // 

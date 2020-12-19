@@ -115,5 +115,12 @@ namespace FinalTermAssignment
             addEvent.Show();
             this.Hide();
         }
+
+        private void deleteEventToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            deleteEvent = new DeleteEvent(this, name);
+            deleteEvent.Show();
+            this.Hide();
+        }
     }
 }
