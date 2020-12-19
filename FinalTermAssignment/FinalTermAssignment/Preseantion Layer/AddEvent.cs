@@ -17,6 +17,13 @@ namespace FinalTermAssignment
         HomeScreen HomeScreen;
         DeleteEvent deleteEvent;
         string name;
+
+        public AddEvent()
+        {
+            InitializeComponent();           
+            addButton.Click += this.Refreash;
+            addButton.Click += this.Clear;
+        }
         public AddEvent(DetailsFrom df, string name)
         {
             InitializeComponent();
@@ -24,12 +31,18 @@ namespace FinalTermAssignment
             addButton.Click += this.Refreash;
             addButton.Click += this.Clear;
         }
+        public AddEvent(DeleteEvent deleteEvent, string name)
+        {
+            InitializeComponent();
+            this.deleteEvent = deleteEvent;
+            this.name = name;
+            
+        }
         public AddEvent(HomeScreen homeScreen)
         {
             InitializeComponent();
             this.HomeScreen = homeScreen;
-            addButton.Click += this.Refreash;
-            addButton.Click += this.Clear;
+            
         }
         public AddEvent(ModifyEvent modifyEvent,string name)
         {

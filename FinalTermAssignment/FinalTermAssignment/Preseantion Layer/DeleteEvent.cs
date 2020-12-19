@@ -97,5 +97,12 @@ namespace FinalTermAssignment
             homeScreen.Show();
             this.Hide();
         }
+
+        private void createEventToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            addEvent = new AddEvent(this,name);
+            addEvent.Show();
+            this.Hide();
+        }
     }
 }

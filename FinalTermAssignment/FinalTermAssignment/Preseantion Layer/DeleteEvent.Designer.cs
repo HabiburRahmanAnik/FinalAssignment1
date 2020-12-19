@@ -132,6 +132,7 @@
             this.createEventToolStripMenuItem.Name = "createEventToolStripMenuItem";
             this.createEventToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.createEventToolStripMenuItem.Text = "Create Event";
+            this.createEventToolStripMenuItem.Click += new System.EventHandler(this.createEventToolStripMenuItem_Click);
             // 
             // modifyEventToolStripMenuItem
             // 
