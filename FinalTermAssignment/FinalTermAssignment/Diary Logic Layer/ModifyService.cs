@@ -18,8 +18,8 @@ namespace FinalTermAssignment.Diary_Logic_Layer
         public int ModifyNotes(int eventId,string title,string writetab,string date,string priority)
         {
             Event note = new Event()
-            {
-                EventId = eventId,
+            {      
+                EventId=eventId,
                 Title = title,
                 WriteTab = writetab,
                 Priority = priority,

@@ -101,5 +101,12 @@ namespace FinalTermAssignment
             loginFrom.Show();
             this.Hide();
         }
+
+        private void homeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            homeScreen = new HomeScreen();
+            homeScreen.Show();
+            this.Hide();
+        }
     }
 }
