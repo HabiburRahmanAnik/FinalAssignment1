@@ -13,14 +13,16 @@ namespace FinalTermAssignment
 {
     public partial class DetailsFrom : Form
     {
+        HomeScreen homeScreen;
         string name;
         public DetailsFrom()
         {
             InitializeComponent();
         }
-        public DetailsFrom(HomeScreen hf,string name)
+        public DetailsFrom(HomeScreen homeScreen,string name)
         {
             InitializeComponent();
+            this.homeScreen = homeScreen;
             this.name = name;
         }
 
@@ -60,6 +62,13 @@ namespace FinalTermAssignment
         {
             ModifyEvent modifyEvent = new ModifyEvent(this, name);
             modifyEvent.Show();
+            this.Hide();
+        }
+
+        private void logOutToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            LoginFrom loginFrom = new LoginFrom();
+            loginFrom.Show();
             this.Hide();
         }
     }

@@ -38,9 +38,7 @@ namespace FinalTermAssignment
         {
             InitializeComponent();
             this.lf = lf;
-            this.name = name;            
-            welcomeLabel.Text +=" "+name;
-           
+            this.name = name;                     
         }
 
         private void HomeScreen_FormClosing(object sender, FormClosingEventArgs e)

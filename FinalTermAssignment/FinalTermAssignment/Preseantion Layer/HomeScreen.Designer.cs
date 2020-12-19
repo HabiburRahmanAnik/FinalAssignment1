@@ -31,7 +31,6 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.welcomeLabel = new System.Windows.Forms.Label();
             this.homeScreenDataGridView = new System.Windows.Forms.DataGridView();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.homeScreenDataGridView)).BeginInit();
@@ -59,20 +58,9 @@
             // logOutToolStripMenuItem
             // 
             this.logOutToolStripMenuItem.Name = "logOutToolStripMenuItem";
-            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(145, 26);
+            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.logOutToolStripMenuItem.Text = "Log Out";
             this.logOutToolStripMenuItem.Click += new System.EventHandler(this.logOutToolStripMenuItem_Click);
-            // 
-            // welcomeLabel
-            // 
-            this.welcomeLabel.AutoSize = true;
-            this.welcomeLabel.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.welcomeLabel.ForeColor = System.Drawing.Color.Maroon;
-            this.welcomeLabel.Location = new System.Drawing.Point(274, 52);
-            this.welcomeLabel.Name = "welcomeLabel";
-            this.welcomeLabel.Size = new System.Drawing.Size(94, 23);
-            this.welcomeLabel.TabIndex = 3;
-            this.welcomeLabel.Text = "Welcome";
             // 
             // homeScreenDataGridView
             // 
@@ -96,7 +84,6 @@
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.ClientSize = new System.Drawing.Size(967, 621);
             this.Controls.Add(this.homeScreenDataGridView);
-            this.Controls.Add(this.welcomeLabel);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "HomeScreen";
@@ -116,7 +103,6 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem logOutToolStripMenuItem;
-        private System.Windows.Forms.Label welcomeLabel;
         private System.Windows.Forms.DataGridView homeScreenDataGridView;
     }
 }

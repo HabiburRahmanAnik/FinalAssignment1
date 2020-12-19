@@ -32,11 +32,11 @@ namespace FinalTermAssignment
         {
 
             LoginService loginService = new LoginService();
-           bool result=  loginService.Login(userNameTextBox.Text, passwordTextBox.Text);
-           if(result)
+            bool result = loginService.Login(userNameTextBox.Text, passwordTextBox.Text);
+            if (result)
             {
                 MessageBox.Show("Login Successfully");
-                HomeScreen homeScreen = new HomeScreen(this,userNameTextBox.Text);
+                HomeScreen homeScreen = new HomeScreen(this, userNameTextBox.Text);
                 homeScreen.Show();
                 this.Hide();
 
