@@ -94,5 +94,12 @@ namespace FinalTermAssignment
         {
 
         }
+
+        private void logOutToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            LoginFrom loginFrom = new LoginFrom();
+            loginFrom.Show();
+            this.Hide();
+        }
     }
 }
