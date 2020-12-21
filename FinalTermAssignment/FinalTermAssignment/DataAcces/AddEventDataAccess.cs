@@ -18,7 +18,7 @@ namespace FinalTermAssignment.DataAcces
 
         public int Add(Event events)
         {
-            string query = "INSERT INTO Events(Title,WriteTab,Priority,Date,Id) VALUES('" + events.Title + "','" + events.WriteTab + "','" + events.Priority + "','"+events.Date+"','"+events.Id+"')";
+            string query = "INSERT INTO Events(Title,WriteTab,Priority,Date,Id) VALUES('" + events.Title + "','" + events.WriteTab + "','" + events.Priority + "','" + events.Date + "','" + events.Id + "')";
             dataAcces = new DataAcces();
             int result = this.dataAcces.ExecuteQuery(query);
             return result;
@@ -41,7 +41,6 @@ namespace FinalTermAssignment.DataAcces
                 note.WriteTab = reader["WriteTab"].ToString();
                 note.Priority = reader["Priority"].ToString();
                 note.Date = reader["Date"].ToString();
-                note.Id = (int)reader["Id"];
                 list.Add(note);
             }
             return list;

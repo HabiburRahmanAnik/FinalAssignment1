@@ -13,7 +13,7 @@ namespace FinalTermAssignment
 {
     public partial class DeleteEvent : Form
     {
-        
+
         HomeScreen homeScreen;
         AddEvent addEvent;
         ModifyEvent modifyEvent;
@@ -23,7 +23,7 @@ namespace FinalTermAssignment
         {
             InitializeComponent();
         }
-        public DeleteEvent(AddEvent addEvent,string name)
+        public DeleteEvent(AddEvent addEvent, string name)
         {
             InitializeComponent();
             this.addEvent = addEvent;
@@ -35,7 +35,7 @@ namespace FinalTermAssignment
             this.modifyEvent = modifyEvent;
             this.name = name;
         }
-        public DeleteEvent(DetailsFrom df,string name)
+        public DeleteEvent(DetailsFrom df, string name)
         {
             InitializeComponent();
             this.name = name;
@@ -48,7 +48,7 @@ namespace FinalTermAssignment
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if(eventIdtextBox.Text == "")
+            if (eventIdtextBox.Text == "")
             {
                 MessageBox.Show("Please give the data");
             }
@@ -60,14 +60,14 @@ namespace FinalTermAssignment
                 {
                     MessageBox.Show("Delete Successfully");
                     this.Refreash(this, null);
-                    this.Clear(this,null);
+                    this.Clear(this, null);
                 }
                 else
                 {
                     MessageBox.Show("Error Occur!");
                 }
             }
-            
+
         }
 
         private void DeleteEvent_Load(object sender, EventArgs e)
@@ -108,14 +108,14 @@ namespace FinalTermAssignment
 
         private void createEventToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            addEvent = new AddEvent(this,name);
+            addEvent = new AddEvent(this, name);
             addEvent.Show();
             this.Hide();
         }
 
         private void modifyEventToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            modifyEvent = new ModifyEvent(this,name);
+            modifyEvent = new ModifyEvent(this, name);
             modifyEvent.Show();
             this.Hide();
         }

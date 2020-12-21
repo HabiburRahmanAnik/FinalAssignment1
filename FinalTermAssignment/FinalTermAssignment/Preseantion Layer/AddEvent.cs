@@ -20,7 +20,7 @@ namespace FinalTermAssignment
 
         public AddEvent()
         {
-            InitializeComponent();           
+            InitializeComponent();
         }
         public AddEvent(DetailsFrom df, string name)
         {
@@ -34,20 +34,20 @@ namespace FinalTermAssignment
             InitializeComponent();
             this.deleteEvent = deleteEvent;
             this.name = name;
-            
+
         }
         public AddEvent(HomeScreen homeScreen)
         {
             InitializeComponent();
             this.HomeScreen = homeScreen;
-            
+
         }
-        public AddEvent(ModifyEvent modifyEvent,string name)
+        public AddEvent(ModifyEvent modifyEvent, string name)
         {
             InitializeComponent();
             this.modifyEvent = modifyEvent;
             this.name = name;
-           
+
         }
         private void AddEvent_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -62,7 +62,7 @@ namespace FinalTermAssignment
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if(titleTextBox.Text=="" || writeTextBox.Text=="" || priorityComboBox.Text== "" )
+            if (titleTextBox.Text == "" || writeTextBox.Text == "" || priorityComboBox.Text == "")
             {
                 MessageBox.Show("Fill up the required from");
             }
@@ -81,16 +81,16 @@ namespace FinalTermAssignment
                     MessageBox.Show("Error occur");
                 }
             }
-           
+
         }
         void Refreash(object sender, EventArgs e)
         {
             AddService addService = new AddService();
-            dataGridView1.DataSource= addService.GetAllEvent(name);
+            dataGridView1.DataSource = addService.GetAllEvent(name);
         }
         void Clear(object sender, EventArgs e)
         {
-           titleTextBox.Text= writeTextBox.Text =priorityComboBox.Text=dateTimePicker1.Text= string.Empty;
+            titleTextBox.Text = writeTextBox.Text = priorityComboBox.Text = dateTimePicker1.Text = string.Empty;
         }
 
         private void logOutToolStripMenuItem_Click(object sender, EventArgs e)
@@ -102,14 +102,14 @@ namespace FinalTermAssignment
 
         private void modifyEventsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            modifyEvent = new ModifyEvent(this,name);
+            modifyEvent = new ModifyEvent(this, name);
             modifyEvent.Show();
             this.Hide();
         }
 
         private void homeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            HomeScreen=new HomeScreen(this,name);
+            HomeScreen = new HomeScreen(this, name);
             HomeScreen.Show();
             this.Hide();
         }
@@ -123,7 +123,7 @@ namespace FinalTermAssignment
 
         private void deleteEventsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            deleteEvent = new DeleteEvent(this,name);
+            deleteEvent = new DeleteEvent(this, name);
             deleteEvent.Show();
             this.Hide();
         }

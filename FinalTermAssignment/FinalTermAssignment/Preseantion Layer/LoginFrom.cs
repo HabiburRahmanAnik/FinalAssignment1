@@ -16,8 +16,6 @@ namespace FinalTermAssignment
 {
     public partial class LoginFrom : Form
     {
-        //int id;
-        //string name;
         public LoginFrom()
         {
             InitializeComponent();
@@ -44,6 +42,8 @@ namespace FinalTermAssignment
             {
                 invalidLabel.Visible = true;
             }
+
+
         }
     }
 }

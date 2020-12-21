@@ -1,6 +1,7 @@
 ﻿using FinalTermAssignment.Entities;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -17,7 +18,7 @@ namespace FinalTermAssignment.DataAcces
         }
         public List<Event> GetAllNote(string username)
         {
-            string query = "SELECT * FROM User3 WHERE Username='" + username + "'";           
+            string query = "SELECT * FROM User3 WHERE Username='" + username + "'";
             SqlDataReader reader = this.dataAcces.GetAll(query);
             reader.Read();
             int id = (int)reader["Id"];
@@ -35,6 +36,6 @@ namespace FinalTermAssignment.DataAcces
             }
             return list;
         }
-        
+
     }
 }
