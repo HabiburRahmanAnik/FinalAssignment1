@@ -23,8 +23,6 @@ namespace FinalTermAssignment
         public ModifyEvent()
         {
             InitializeComponent();
-            modifyButton.Click += this.Refreash;
-            modifyButton.Click += this.Clear;
         }
         public ModifyEvent(AddEvent addEvent,string name)
         {
@@ -52,12 +50,14 @@ namespace FinalTermAssignment
 
         private void button1_Click(object sender, EventArgs e)
         {
+           
            ModifyService modifyService = new ModifyService();
            int result = modifyService.ModifyNotes(eventId,titleTextBox.Text, writeTextBox.Text, dateTimePicker.Text, importantComboBox.Text);
             if (result > 0)
             {
                 MessageBox.Show("Modify Successfully");
-               // this.Refreash(this,null);
+                this.Refreash(this,null);
+                this.Clear(this, null);
             }
             else
             {
@@ -94,18 +94,7 @@ namespace FinalTermAssignment
             LoginFrom lf = new LoginFrom();
             lf.Show();
             this.Hide();
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
+        }  
         private void logOutToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             LoginFrom loginFrom = new LoginFrom();

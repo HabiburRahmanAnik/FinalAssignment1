@@ -143,7 +143,6 @@
             this.label4.Size = new System.Drawing.Size(43, 20);
             this.label4.TabIndex = 8;
             this.label4.Text = "Title";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // titleTextBox
             // 
@@ -151,8 +150,7 @@
             this.titleTextBox.Multiline = true;
             this.titleTextBox.Name = "titleTextBox";
             this.titleTextBox.Size = new System.Drawing.Size(588, 79);
-            this.titleTextBox.TabIndex = 11;
-            this.titleTextBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.titleTextBox.TabIndex = 11;            
             // 
             // groupBox1
             // 
