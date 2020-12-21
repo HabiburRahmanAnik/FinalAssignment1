@@ -56,7 +56,7 @@
             this.deleteDataGridView.RowTemplate.Height = 24;
             this.deleteDataGridView.Size = new System.Drawing.Size(565, 304);
             this.deleteDataGridView.TabIndex = 7;
-            this.deleteDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            
             // 
             // delete_Button
             // 

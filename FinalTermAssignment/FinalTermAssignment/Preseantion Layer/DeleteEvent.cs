@@ -22,8 +22,6 @@ namespace FinalTermAssignment
         public DeleteEvent()
         {
             InitializeComponent();
-            delete_Button.Click += this.Refreash;
-            delete_Button.Click += this.Clear;
         }
         public DeleteEvent(AddEvent addEvent,string name)
         {
@@ -50,17 +48,26 @@ namespace FinalTermAssignment
 
         private void button1_Click(object sender, EventArgs e)
         {
-            DeleteService deleteService = new DeleteService();
-            int result = deleteService.DeleteNotes(Convert.ToInt32( eventIdtextBox.Text));
-            if(result>0)
+            if(eventIdtextBox.Text == "")
             {
-                MessageBox.Show("Delete Successfully");
-                this.Refreash(this, null);
+                MessageBox.Show("Please give the data");
             }
             else
             {
-                MessageBox.Show("Error Occur!");
+                DeleteService deleteService = new DeleteService();
+                int result = deleteService.DeleteNotes(Convert.ToInt32(eventIdtextBox.Text));
+                if (result > 0)
+                {
+                    MessageBox.Show("Delete Successfully");
+                    this.Refreash(this, null);
+                    this.Clear(this,null);
+                }
+                else
+                {
+                    MessageBox.Show("Error Occur!");
+                }
             }
+            
         }
 
         private void DeleteEvent_Load(object sender, EventArgs e)
