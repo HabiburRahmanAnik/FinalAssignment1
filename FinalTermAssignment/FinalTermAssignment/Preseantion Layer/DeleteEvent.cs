@@ -18,6 +18,13 @@ namespace FinalTermAssignment
         AddEvent addEvent;
         ModifyEvent modifyEvent;
         string name;
+
+        public DeleteEvent()
+        {
+            InitializeComponent();
+            delete_Button.Click += this.Refreash;
+            delete_Button.Click += this.Clear;
+        }
         public DeleteEvent(AddEvent addEvent,string name)
         {
             InitializeComponent();
@@ -34,8 +41,6 @@ namespace FinalTermAssignment
         {
             InitializeComponent();
             this.name = name;
-            delete_Button.Click += this.Refreash;
-            delete_Button.Click += this.Clear;
         }
 
         private void DeleteEvent_FormClosing(object sender, FormClosingEventArgs e)
@@ -43,11 +48,6 @@ namespace FinalTermAssignment
             Application.Exit();
         }
 
-        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-           // eventId = (int)deleteDataGridView.Rows[e.RowIndex].Cells[0].Value;
-
-        }
         private void button1_Click(object sender, EventArgs e)
         {
             DeleteService deleteService = new DeleteService();
@@ -55,6 +55,7 @@ namespace FinalTermAssignment
             if(result>0)
             {
                 MessageBox.Show("Delete Successfully");
+                this.Refreash(this, null);
             }
             else
             {
@@ -102,6 +103,13 @@ namespace FinalTermAssignment
         {
             addEvent = new AddEvent(this,name);
             addEvent.Show();
+            this.Hide();
+        }
+
+        private void modifyEventToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            modifyEvent = new ModifyEvent(this,name);
+            modifyEvent.Show();
             this.Hide();
         }
     }

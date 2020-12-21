@@ -139,6 +139,7 @@
             this.modifyEventToolStripMenuItem.Name = "modifyEventToolStripMenuItem";
             this.modifyEventToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.modifyEventToolStripMenuItem.Text = "Modify Event";
+            this.modifyEventToolStripMenuItem.Click += new System.EventHandler(this.modifyEventToolStripMenuItem_Click);
             // 
             // logOutToolStripMenuItem
             // 

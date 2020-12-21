@@ -16,6 +16,7 @@ namespace FinalTermAssignment
         AddEvent addEvent;
         DeleteEvent deleteEvent;
         ModifyEvent modifyEvent;
+        DetailsFrom detailsFrom;
         LoginFrom lf;
         string name;
 
@@ -46,6 +47,12 @@ namespace FinalTermAssignment
             InitializeComponent();
             this.lf = lf;
             this.name = name;                     
+        }
+        public HomeScreen(DetailsFrom detailsFrom,string name)
+        {
+            InitializeComponent();
+            this.detailsFrom = detailsFrom;
+            this.name = name;
         }
 
         private void HomeScreen_FormClosing(object sender, FormClosingEventArgs e)

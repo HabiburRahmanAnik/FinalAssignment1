@@ -16,15 +16,16 @@ namespace FinalTermAssignment.Diary_Logic_Layer
         {
             this.addEventDataAccess = new AddEventDataAccess();
         }
-        public int Add(string title,string note,string priority,string date,int id)
+        public int Add(string title,string note,string priority,string date, int id)
         {
+            //int userId = addEventDataAccess.GetUserId(username);
             Event events = new Event()
             {
                 Title=title,
                 WriteTab = note,
                 Priority = priority,
                 Date = date,
-                Id = id               
+                Id = id           
             };
             return this.addEventDataAccess.Add(events);
         }

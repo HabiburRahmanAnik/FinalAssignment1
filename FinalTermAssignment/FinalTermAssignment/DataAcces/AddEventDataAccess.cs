@@ -19,6 +19,7 @@ namespace FinalTermAssignment.DataAcces
         public int Add(Event events)
         {
             string query = "INSERT INTO Events(Title,WriteTab,Priority,Date,Id) VALUES('" + events.Title + "','" + events.WriteTab + "','" + events.Priority + "','"+events.Date+"','"+events.Id+"')";
+            dataAcces = new DataAcces();
             int result = this.dataAcces.ExecuteQuery(query);
             return result;
         }
@@ -45,5 +46,13 @@ namespace FinalTermAssignment.DataAcces
             }
             return list;
         }
+        //public int GetUserId(string username)
+        //{
+        //    string query = "SELECT * FROM User3 WHERE Username='" + username + "'";
+        //    SqlDataReader reader = this.dataAcces.GetAll(query);
+        //    reader.Read();
+        //    return (int)reader["Id"];
+
+        //}
     }
 }

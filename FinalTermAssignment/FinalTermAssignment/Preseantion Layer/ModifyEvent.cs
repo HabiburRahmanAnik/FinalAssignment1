@@ -20,6 +20,12 @@ namespace FinalTermAssignment
         string name;
         int eventId = 0;
 
+        public ModifyEvent()
+        {
+            InitializeComponent();
+            modifyButton.Click += this.Refreash;
+            modifyButton.Click += this.Clear;
+        }
         public ModifyEvent(AddEvent addEvent,string name)
         {
             InitializeComponent();
@@ -30,9 +36,13 @@ namespace FinalTermAssignment
         {
             InitializeComponent();
             this.df = df;
+            this.name = name;          
+        }
+        public ModifyEvent(DeleteEvent deleteEvent,string name)
+        {
+            InitializeComponent();
+            this.deleteEvent = deleteEvent;
             this.name = name;
-            modifyButton.Click += this.Refreash;
-            modifyButton.Click += this.Clear;
         }
 
         private void ModifyEvent_FormClosing(object sender, FormClosingEventArgs e)
@@ -47,6 +57,7 @@ namespace FinalTermAssignment
             if (result > 0)
             {
                 MessageBox.Show("Modify Successfully");
+               // this.Refreash(this,null);
             }
             else
             {

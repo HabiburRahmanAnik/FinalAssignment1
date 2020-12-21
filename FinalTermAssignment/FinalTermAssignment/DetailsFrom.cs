@@ -65,10 +65,17 @@ namespace FinalTermAssignment
             this.Hide();
         }
 
-        private void logOutToolStripMenuItem_Click_1(object sender, EventArgs e)
+        private void logOutToolStripMenuItem_Click_2(object sender, EventArgs e)
         {
             LoginFrom loginFrom = new LoginFrom();
             loginFrom.Show();
+            this.Hide();
+        }
+
+        private void homeScreenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            homeScreen = new HomeScreen(this, name);
+            homeScreen.Show();
             this.Hide();
         }
     }

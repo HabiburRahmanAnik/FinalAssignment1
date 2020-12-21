@@ -14,7 +14,6 @@ namespace FinalTermAssignment.DataAcces
         public HomeDataAccess()
         {
             this.dataAcces = new DataAcces();
-
         }
         public List<Event> GetAllNote(string username)
         {
@@ -36,5 +35,6 @@ namespace FinalTermAssignment.DataAcces
             }
             return list;
         }
+        
     }
 }
