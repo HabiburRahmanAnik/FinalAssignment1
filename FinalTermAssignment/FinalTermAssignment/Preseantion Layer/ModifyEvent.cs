@@ -86,7 +86,7 @@ namespace FinalTermAssignment
         }
         void Clear(object sender, EventArgs e)
         {
-            writeTextBox.Text = importantComboBox.Text = dateTimePicker.Text = string.Empty;
+           titleTextBox.Text = writeTextBox.Text = importantComboBox.Text = dateTimePicker.Text = string.Empty;
         }
 
         private void logOutToolStripMenuItem_Click(object sender, EventArgs e)
