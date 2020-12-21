@@ -69,7 +69,7 @@ namespace FinalTermAssignment
             else
             {
                 AddService addService = new AddService();
-                int result = addService.Add(titleTextBox.Text, writeTextBox.Text, priorityComboBox.Text, dateTimePicker1.Text, Convert.ToInt32(userIdTextBox.Text));
+                int result = addService.Add(titleTextBox.Text, writeTextBox.Text, priorityComboBox.Text, dateTimePicker1.Text, name);
                 if (result > 0)
                 {
                     MessageBox.Show("Add seccessfully");
@@ -90,7 +90,7 @@ namespace FinalTermAssignment
         }
         void Clear(object sender, EventArgs e)
         {
-           titleTextBox.Text= writeTextBox.Text =priorityComboBox.Text=dateTimePicker1.Text= userIdTextBox.Text= string.Empty;
+           titleTextBox.Text= writeTextBox.Text =priorityComboBox.Text=dateTimePicker1.Text= string.Empty;
         }
 
         private void logOutToolStripMenuItem_Click(object sender, EventArgs e)

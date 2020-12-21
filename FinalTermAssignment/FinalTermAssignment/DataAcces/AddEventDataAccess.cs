@@ -46,6 +46,13 @@ namespace FinalTermAssignment.DataAcces
             }
             return list;
         }
-        
+        public int GetUserId(string username)
+        {
+            string query = "SELECT * FROM User3 WHERE Username='" + username + "'";
+            SqlDataReader reader = this.dataAcces.GetAll(query);
+            reader.Read();
+            return (int)reader["Id"];
+
+        }
     }
 }

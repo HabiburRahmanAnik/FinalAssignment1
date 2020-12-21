@@ -39,8 +39,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.titleTextBox = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.userIdTextBox = new System.Windows.Forms.TextBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.menuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteEventsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -57,12 +55,12 @@
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(746, 49);
+            this.dataGridView1.Location = new System.Drawing.Point(746, 61);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(616, 315);
+            this.dataGridView1.Size = new System.Drawing.Size(616, 303);
             this.dataGridView1.TabIndex = 0;
             // 
             // label1
@@ -127,7 +125,7 @@
             // addButton
             // 
             this.addButton.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addButton.Location = new System.Drawing.Point(318, 478);
+            this.addButton.Location = new System.Drawing.Point(240, 439);
             this.addButton.Name = "addButton";
             this.addButton.Size = new System.Drawing.Size(245, 43);
             this.addButton.TabIndex = 6;
@@ -163,34 +161,14 @@
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.titleTextBox);
-            this.groupBox1.Controls.Add(this.userIdTextBox);
-            this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.addButton);
             this.groupBox1.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(22, 37);
+            this.groupBox1.Location = new System.Drawing.Point(22, 49);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(718, 522);
+            this.groupBox1.Size = new System.Drawing.Size(718, 510);
             this.groupBox1.TabIndex = 9;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Create New Event";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(46, 421);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(57, 20);
-            this.label5.TabIndex = 7;
-            this.label5.Text = "UserId";
-            // 
-            // userIdTextBox
-            // 
-            this.userIdTextBox.Font = new System.Drawing.Font("Cambria", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.userIdTextBox.Location = new System.Drawing.Point(163, 421);
-            this.userIdTextBox.Name = "userIdTextBox";
-            this.userIdTextBox.Size = new System.Drawing.Size(236, 25);
-            this.userIdTextBox.TabIndex = 8;
             // 
             // menuStrip1
             // 
@@ -217,28 +195,28 @@
             // deleteEventsToolStripMenuItem
             // 
             this.deleteEventsToolStripMenuItem.Name = "deleteEventsToolStripMenuItem";
-            this.deleteEventsToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.deleteEventsToolStripMenuItem.Size = new System.Drawing.Size(185, 26);
             this.deleteEventsToolStripMenuItem.Text = "Delete Events";
             this.deleteEventsToolStripMenuItem.Click += new System.EventHandler(this.deleteEventsToolStripMenuItem_Click);
             // 
             // modifyEventsToolStripMenuItem
             // 
             this.modifyEventsToolStripMenuItem.Name = "modifyEventsToolStripMenuItem";
-            this.modifyEventsToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.modifyEventsToolStripMenuItem.Size = new System.Drawing.Size(185, 26);
             this.modifyEventsToolStripMenuItem.Text = "Modify Events";
             this.modifyEventsToolStripMenuItem.Click += new System.EventHandler(this.modifyEventsToolStripMenuItem_Click);
             // 
             // homeToolStripMenuItem
             // 
             this.homeToolStripMenuItem.Name = "homeToolStripMenuItem";
-            this.homeToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.homeToolStripMenuItem.Size = new System.Drawing.Size(185, 26);
             this.homeToolStripMenuItem.Text = "Home";
             this.homeToolStripMenuItem.Click += new System.EventHandler(this.homeToolStripMenuItem_Click);
             // 
             // logOutToolStripMenuItem
             // 
             this.logOutToolStripMenuItem.Name = "logOutToolStripMenuItem";
-            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(185, 26);
             this.logOutToolStripMenuItem.Text = "Log out";
             this.logOutToolStripMenuItem.Click += new System.EventHandler(this.logOutToolStripMenuItem_Click_1);
             // 
@@ -279,8 +257,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox titleTextBox;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox userIdTextBox;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem menuToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem deleteEventsToolStripMenuItem;
