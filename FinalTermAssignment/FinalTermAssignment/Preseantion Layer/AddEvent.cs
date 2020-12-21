@@ -21,8 +21,6 @@ namespace FinalTermAssignment
         public AddEvent()
         {
             InitializeComponent();           
-            addButton.Click += this.Refreash;
-            addButton.Click += this.Clear;
         }
         public AddEvent(DetailsFrom df, string name)
         {
@@ -69,6 +67,8 @@ namespace FinalTermAssignment
             if (result > 0)
             {
                 MessageBox.Show("Add seccessfully");
+                this.Refreash(this, null);
+                this.Clear(this, null);
             }
             else
             {
