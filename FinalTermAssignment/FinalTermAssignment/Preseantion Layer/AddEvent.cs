@@ -62,18 +62,26 @@ namespace FinalTermAssignment
 
         private void button1_Click(object sender, EventArgs e)
         {
-            AddService addService = new AddService();
-            int result = addService.Add(titleTextBox.Text,writeTextBox.Text, priorityComboBox.Text, dateTimePicker1.Text, Convert.ToInt32( userIdTextBox.Text));
-            if (result > 0)
+            if(titleTextBox.Text=="" || writeTextBox.Text=="" || priorityComboBox.Text== "" )
             {
-                MessageBox.Show("Add seccessfully");
-                this.Refreash(this, null);
-                this.Clear(this, null);
+                MessageBox.Show("Fill up the required from");
             }
             else
             {
-                MessageBox.Show("Error occur");
+                AddService addService = new AddService();
+                int result = addService.Add(titleTextBox.Text, writeTextBox.Text, priorityComboBox.Text, dateTimePicker1.Text, Convert.ToInt32(userIdTextBox.Text));
+                if (result > 0)
+                {
+                    MessageBox.Show("Add seccessfully");
+                    this.Refreash(this, null);
+                    this.Clear(this, null);
+                }
+                else
+                {
+                    MessageBox.Show("Error occur");
+                }
             }
+           
         }
         void Refreash(object sender, EventArgs e)
         {
