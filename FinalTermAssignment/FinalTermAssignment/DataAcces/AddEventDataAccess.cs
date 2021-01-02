@@ -18,18 +18,18 @@ namespace FinalTermAssignment.DataAcces
 
         public int Add(Event events)
         {
-            string query = "INSERT INTO Events(Title,WriteTab,Priority,Date,Id) VALUES('" + events.Title + "','" + events.WriteTab + "','" + events.Priority + "','" + events.Date + "','" + events.Id + "')";
+            string query = "INSERT INTO Event2(Title,WriteTab,Priority,Date,UserId) VALUES('" + events.Title + "','" + events.WriteTab + "','" + events.Priority + "','" + events.Date + "','" + events.Id + "')";
             dataAcces = new DataAcces();
             int result = this.dataAcces.ExecuteQuery(query);
             return result;
         }
         public List<Event> GetAllEvent(string username)
         {
-            string query = "SELECT * FROM User3 WHERE Username='" + username + "'";
+            string query = "SELECT * FROM Users WHERE Username='" + username + "'";
             SqlDataReader reader = this.dataAcces.GetAll(query);
             reader.Read();
-            int id = (int)reader["Id"];
-            string query1 = "SELECT * FROM Events WHERE Id=" + id;
+            int id = (int)reader["UserId"];
+            string query1 = "SELECT * FROM Event2 WHERE UserId=" + id;
             dataAcces = new DataAcces();
             reader = this.dataAcces.GetAll(query1);
             List<Event> list = new List<Event>();
@@ -41,16 +41,17 @@ namespace FinalTermAssignment.DataAcces
                 note.WriteTab = reader["WriteTab"].ToString();
                 note.Priority = reader["Priority"].ToString();
                 note.Date = reader["Date"].ToString();
+                note.Id = (int)reader["UserId"];
                 list.Add(note);
             }
             return list;
         }
         public int GetUserId(string username)
         {
-            string query = "SELECT * FROM User3 WHERE Username='" + username + "'";
+            string query = "SELECT * FROM Users WHERE Username='" + username + "'";
             SqlDataReader reader = this.dataAcces.GetAll(query);
             reader.Read();
-            return (int)reader["Id"];
+            return (int)reader["UserId"];
 
         }
     }

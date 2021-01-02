@@ -62,6 +62,7 @@ namespace FinalTermAssignment
 
         private void HomeScreen_Load(object sender, EventArgs e)
         {
+
             HomeService homeService = new HomeService();
             homeScreenDataGridView.DataSource = homeService.GetAllNote(name);
         }

@@ -1,5 +1,6 @@
 ﻿using FinalTermAssignment.Diary_Logic_Layer;
 using FinalTermAssignment.Entities;
+using FinalTermAssignment.Preseantion_Layer;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -44,6 +45,13 @@ namespace FinalTermAssignment
             }
 
 
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+            SignUpFrom signUpFrom = new SignUpFrom();
+            signUpFrom.Show();
+            this.Hide();
         }
     }
 }

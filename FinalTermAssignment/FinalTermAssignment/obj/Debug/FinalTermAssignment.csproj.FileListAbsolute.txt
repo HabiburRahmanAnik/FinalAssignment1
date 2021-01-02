@@ -41,3 +41,4 @@ F:\8th semester\git\FinalAssignment1\FinalTermAssignment\FinalTermAssignment\obj
 F:\8th semester\git\FinalAssignment1\FinalTermAssignment\FinalTermAssignment\obj\Debug\FinalTermAssignment.exe
 F:\8th semester\git\FinalAssignment1\FinalTermAssignment\FinalTermAssignment\obj\Debug\FinalTermAssignment.pdb
 F:\8th semester\git\FinalAssignment1\FinalTermAssignment\FinalTermAssignment\obj\Debug\FinalTermAssignment.DetailsFrom.resources
+F:\8th semester\git\FinalAssignment1\FinalTermAssignment\FinalTermAssignment\obj\Debug\FinalTermAssignment.Preseantion_Layer.SignUpFrom.resources

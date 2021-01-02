@@ -19,7 +19,7 @@ namespace FinalTermAssignment.DataAcces
 
         public bool Login(string username,string password)
         {
-            string query = "SELECT * FROM User3 WHERE Username='" + username + "' and Password='" + password + "'";
+            string query = "SELECT * FROM Users WHERE Username='" + username + "' and Password='" + password + "'";
             SqlDataReader reader = this.dataAcces.GetAll(query);
             if (reader.Read())
             {

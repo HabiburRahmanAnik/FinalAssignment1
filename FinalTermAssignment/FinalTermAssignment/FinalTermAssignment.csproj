@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataAcces\SignUpDataAccess.cs" />
     <Compile Include="DetailsFrom.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -54,6 +55,7 @@
     </Compile>
     <Compile Include="Diary Logic Layer\DeleteService.cs" />
     <Compile Include="Diary Logic Layer\ModifyService.cs" />
+    <Compile Include="Diary Logic Layer\SignUpService.cs" />
     <Compile Include="Preseantion Layer\AddEvent.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,6 +97,12 @@
     <Compile Include="Preseantion Layer\ModifyEvent.Designer.cs">
       <DependentUpon>ModifyEvent.cs</DependentUpon>
     </Compile>
+    <Compile Include="Preseantion Layer\SignUpFrom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Preseantion Layer\SignUpFrom.Designer.cs">
+      <DependentUpon>SignUpFrom.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="DetailsFrom.resx">
@@ -114,6 +122,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Preseantion Layer\ModifyEvent.resx">
       <DependentUpon>ModifyEvent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Preseantion Layer\SignUpFrom.resx">
+      <DependentUpon>SignUpFrom.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -17,7 +17,7 @@ namespace FinalTermAssignment.DataAcces
 
         public int DeleteNote(int id)
         {
-            string query = "DELETE FROM Events WHERE [EventId]=" + id;
+            string query = "DELETE FROM Event2 WHERE [EventId]=" + id;
             int result =this.dataAcces.ExecuteQuery(query);
             return result;
         }

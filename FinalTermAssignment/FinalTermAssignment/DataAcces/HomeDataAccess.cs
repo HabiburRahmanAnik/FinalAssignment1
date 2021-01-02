@@ -18,11 +18,11 @@ namespace FinalTermAssignment.DataAcces
         }
         public List<Event> GetAllNote(string username)
         {
-            string query = "SELECT * FROM User3 WHERE Username='" + username + "'";
+            string query = "SELECT * FROM Users WHERE Username='" + username + "'";
             SqlDataReader reader = this.dataAcces.GetAll(query);
             reader.Read();
-            int id = (int)reader["Id"];
-            string query1 = "SELECT * FROM Events WHERE Id=" + id;
+            int id = (int)reader["UserId"];
+            string query1 = "SELECT * FROM Event2 WHERE UserId=" + id;
             dataAcces = new DataAcces();
             reader = this.dataAcces.GetAll(query1);
             List<Event> list = new List<Event>();
